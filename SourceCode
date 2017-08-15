@@ -1,0 +1,161 @@
+Goto A0
+Lbl A0
+Menu(" Please Select Program ","Quadratic Formula Solver",A,"2D Distance",B,"2D Mid-Point",C,"Slope of Line",D,"3D Distance",F,"System of Equtions",G,"Other Useful Formulas",H,"Quit",Q,"About Me",AM
+
+
+Lbl A
+ClrHome
+Input "A = ",A
+Input "B = ",B
+Input "C = ",C
+Disp "X1 =",(­B+√(B²-4*A*C))/(2*A)
+Disp "X2 =",(­B-√(B²-4*A*C))/(2*A)
+Stop
+
+Lbl B
+ClrHome
+Input "X1 = ",A
+Input "Y1 = ",B
+Input "X2 = ",C
+Input "Y2 = ",D
+Disp "Distance",√((C-A)²+(D-B)²)
+Stop
+
+Lbl C
+ClrHome
+Input "X1 = ",A
+Input "Y1 = ",B
+Input "X2 = ",C
+Input "Y2 = ",D
+Disp "Mid-Point X",(A+C)/2
+Disp "Mid-Point Y",(D+B)/2
+Stop
+
+Lbl D
+ClrHome
+Input "X1 = ",A
+Input "Y1 = ",B
+Input "X2 = ",C
+Input "Y2 = ",D
+Disp "Slope of Line",(D-B)/(C-A)
+Stop
+
+Lbl E
+Input "INITIAL AMOUNT:",P
+Input "INTEREST RATE:",R
+Input "NBR OF CMPD/YR:",N
+Input "NBR OF YEAR:",T
+Disp "TOTAL ACCUMULATED:",P(1+(R/N))^(NT)
+Stop
+
+Lbl F
+ClrHome
+Disp "ENTER 1ST SET"
+Input "X 1= ",A
+Input "Y 1= ",B
+Input "Z 1= ",E
+Disp "ENTER 2ND SET"
+Input "X 2= ",C
+Input "Y 2= ",D
+Input "Z 2= ",F
+Disp "DISTANCE=",√((A-C)²+(B-D)²+(E-F)²)
+
+Stop
+
+Lbl G
+ClrHome
+Disp "ax+by=c  dx+ey=f"
+Disp "Enter","coefficients"
+Prompt A,B,C,D,E,F
+If AE-BD=0
+Then
+Goto GG
+End
+(CE-BF)/(AE-BD)→X
+(AF-CD)/(AE-BD)→Y
+Disp "Solution:"
+Disp "x=",XFrac
+Disp "y=",YFrac
+Pause 
+Stop
+
+Lbl GG
+If CE-BF=0 or AF-CD=0
+Then
+Disp "Infinite","solutions"
+Else
+Disp "No solution"
+Pause 
+
+Lbl H
+Menu(" Please Select Formula ","Trig Identities",H0,"Polygon",H1,"Quadratic Root Product",H2,"Quadratic Root Sum",H3,"Compound Interest",E,"./ Back to Parent Dir.",A0
+
+Lbl H0
+Pause "sin²(θ) + cos²(θ) = 1"
+Pause "tan²(θ) + 1 = sec²(θ)"
+Pause "cot²(θ) + 1 = csc²(θ)"
+Stop
+
+Lbl H1
+Menu(" Polygon ","Pentagon - 5 Side",HA,"Hexagon - 6 Side",HD
+
+Lbl HA
+Menu(" Pentagon ","Solve for Area",HB,"Solve for Side",HC
+
+Lbl HB
+Input "Side=?",S
+Disp "Area ="
+Pause ((1/4)√(5(5+2√(5)))(S^2))
+Stop
+
+Lbl HC
+Input "Area=",A
+Disp "Side ="
+Pause √(A/((1/4)√(5(5+2√(5))))
+Stop
+
+Lbl HD
+Menu(" Hexagon ","Solve for Area",HE,"Solve for Side",HF
+
+Lbl HE
+Input "Side=",S
+Disp "Area ="
+Pause ((3√(3))/2)(S^2)
+Stop
+
+Lbl HF
+Input "Area=",A
+Disp "Side ="
+Pause (3^(1/4))√(2(A/9))
+Stop
+
+Lbl H2
+Disp "Ax²+Bx+C=0"
+Disp "Product = C/A"
+Input "A=",A
+Pause "B is not needed"
+Input "C=?",C
+Pause (C/A)FD
+Stop
+
+Lbl H3
+Disp "Ax²+Bx+C=0"
+Disp "Sum = -B/A"
+Input "A=",A
+Input "B=",B
+Pause (­B/A)FD
+Stop
+
+Lbl AM
+Disp "Hi,"
+Disp "I'm Peter Huang"
+Disp "The Author of this Program"
+Disp "If you have any questions"
+Disp "Or Comments"
+Pause "Please Contact Me At:"
+Disp "peter@peterhuang.cn"
+Disp "Please Enjoyyyyyy!"
+
+
+Lbl Q
+Stop
